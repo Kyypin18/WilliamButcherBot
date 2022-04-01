@@ -18,7 +18,7 @@ if HEROKU:
     SUDO_USERS_ID = [int(x) for x in environ.get("SUDO_USERS_ID", "").split()]
     LOG_GROUP_ID = int(environ.get("LOG_GROUP_ID", None))
     GBAN_LOG_GROUP_ID = int(environ.get("GBAN_LOG_GROUP_ID", None))
-    MESSAGE_DUMP_CHAT = int(environ.get("MESSAGE_DUMP_CHAT", None))
+    MESSAGE_DUMP_CHAT = environ.get("MESSAGE_DUMP_CHAT", None)
     WELCOME_DELAY_KICK_SEC = int(environ.get("WELCOME_DELAY_KICK_SEC", None))
     MONGO_URL = environ.get("MONGO_URL", None)
     ARQ_API_URL = environ.get("ARQ_API_URL", None)
